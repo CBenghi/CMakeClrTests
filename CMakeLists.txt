@@ -17,23 +17,11 @@ project(CMakeProject1
 add_executable (CMakeProject1 
 	"CMakeProject1.cpp" 
 	"CMakeProject1.h"
-	"NewFile.h"
-	"Header.h"
+	"nativeClass.h"
+	"clrClass.h"
 )
-
 message ("CMAKE_VERSION: " ${CMAKE_VERSION})
-
-
-if (CMAKE_VERSION VERSION_LESS 3.12)
-  set_target_properties (CMakeProject1
-    PROPERTIES COMPILE_FLAGS "/clr")
-    message("Setting clr flag")
-else ()
-  set_target_properties (CMakeProject1
-    PROPERTIES COMMON_LANGUAGE_RUNTIME "")
-    message("Setting clr target")
-endif()
+set_target_properties (CMakeProject1 PROPERTIES COMMON_LANGUAGE_RUNTIME "")
 set(CMAKE_DOTNET_TARGET_FRAMEWORK_VERSION "4.8")
-
 
 # TODO: Add tests and install targets if needed.

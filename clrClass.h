@@ -1,5 +1,5 @@
 #pragma once
-ref class platformDependent
+ref class clrClass
 {
 public:
     int Some() { return 5; }

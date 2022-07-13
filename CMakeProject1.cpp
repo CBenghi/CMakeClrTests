@@ -2,19 +2,20 @@
 //
 
 #include "CMakeProject1.h"
-#include "NewFile.h"
-#include "Header.h"
+#include "clrClass.h"
+#include "nativeClass.h"
 
 using namespace std;
 
 int main()
 {
-	auto f = MyFile();
-	
-	platformDependent^ df = gcnew platformDependent();
-	int t2 = df->Some();
-	int t = f.Some();
-	cout << "Hello CMake." << t2 << endl;
+	auto f = nativeClass();
+	clrClass^ cc = gcnew clrClass();
+	int clrClassValue = cc->Some();
+	int nativeValue = f.Some();
+	cout << "Hello CMake." << endl;
+	cout << "clrClass: " << clrClassValue << endl;
+	cout << "nativeClass: " << nativeValue << endl;
 	return 0;
 }
 
