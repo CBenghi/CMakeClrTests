@@ -6,8 +6,7 @@ cmake_minimum_required (VERSION 3.8)
 # Add source to this project's executable.
 
 project(CMakeProject1
-        DESCRIPTION "Example showing how to link CLR projects"
-        HOMEPAGE_URL "https://github.com/PhantomGrazzler/example-clr-linking-cmake"
+        DESCRIPTION "Example showing how to compiler C++/CLI projects"
         LANGUAGES CXX)
 
 # set(CMAKE_CXX_STANDARD 17)
